@@ -1,0 +1,20 @@
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\bin\Debug\Main system.exe.config
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\bin\Debug\Main system.exe
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\bin\Debug\Main system.pdb
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\bin\Debug\Main system.xml
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main system.vbproj.AssemblyReference.cache
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main_system.Form1.resources
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main_system.Resources.resources
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main system.vbproj.GenerateResource.cache
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main system.vbproj.CoreCompileInputs.cache
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main system.exe
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main system.xml
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main system.pdb
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main_system.loadingForm.resources
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main_system.DashboardForm.resources
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main_system.AppoinmentForm.resources
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main_system.DoctorForm.resources
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main_system.PatientForm.resources
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main_system.RecordForm.resources
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\bin\Debug\MySql.Data.dll
+C:\Users\GRATECH\Desktop\Main system\Main system\Main system\obj\Debug\Main sys.76BA47C8.Up2Date
