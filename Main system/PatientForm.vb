@@ -2,7 +2,6 @@
 
 Public Class PatientForm
     Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
-
     Public cmd As MySqlCommand
     Public da As New MySqlDataAdapter(cmd)
     Public dt As New DataTable
@@ -15,7 +14,7 @@ Public Class PatientForm
             End If
 
             Dim query As String
-            query = "INSERT INTO patient(`Full Name`, `Sex`, `Age`, `Address`, `Contact`) VALUES (@FullName, @Sex, @Age, @Address,@Contact)"
+            query = "INSERT INTO patient(`Full Name`, Sex, Age, Address, Contact) VALUES (@FullName, @Sex, @Age, @Address, @Contact)"
             cmd = New MySqlCommand(query, con)
 
             cmd.Parameters.Clear()
@@ -26,7 +25,7 @@ Public Class PatientForm
             cmd.Parameters.AddWithValue("@Contact", txtcontactno.Text)
 
             cmd.ExecuteNonQuery()
-            MsgBox("data inserted")
+            MsgBox("Data inserted")
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
@@ -41,7 +40,7 @@ Public Class PatientForm
                 con.Open()
             End If
 
-            Dim cmd As New MySqlCommand("SELECT * FROM `patient`", con)
+            Dim cmd As New MySqlCommand("SELECT * FROM patient", con)
             Dim da As New MySqlDataAdapter(cmd)
             dt.Clear()
             da.Fill(dt)
@@ -53,35 +52,58 @@ Public Class PatientForm
         End Try
     End Sub
 
-    Private Sub btnLoad_Click(sender As Object, e As EventArgs) Handles btnLoad.Click
-        loadData()
-    End Sub
-
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        Try
-            If con.State = ConnectionState.Closed Then
-                con.Open()
-            End If
+        If DataGridView1.SelectedRows.Count > 0 Then
+            Try
+                If con.State = ConnectionState.Closed Then
+                    con.Open()
+                End If
 
-            cmd.Connection = con
-            cmd.CommandType = CommandType.Text
-            cmd.CommandText = ""
-            cmd.ExecuteNonQuery()
-            MsgBox("deleted")
-            loadData()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            con.Close()
-        End Try
+                Dim selectedRow As DataGridViewRow = DataGridView1.SelectedRows(0)
+                Dim id As Integer = Convert.ToInt32(selectedRow.Cells("PatientID").Value)
+
+                Dim query As String = "DELETE FROM patient WHERE PatientID = @ID"
+                cmd = New MySqlCommand(query, con)
+                cmd.Parameters.AddWithValue("@ID", id)
+                cmd.ExecuteNonQuery()
+                MsgBox("Data deleted")
+
+                txtfullname.Clear()
+                cbsex.SelectedIndex = -1
+                txtage.Clear()
+                txtaddress.Clear()
+                txtcontactno.Clear()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                loadData()
+                con.Close()
+            End Try
+        Else
+            MsgBox("Please select a row to delete.")
+        End If
     End Sub
 
     Private Sub PatientForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadData()
+        DataGridView1.DefaultCellStyle.BackColor = Color.Beige
+        DataGridView1.DefaultCellStyle.Font = New Font(DataGridView1.DefaultCellStyle.Font.FontFamily, DataGridView1.DefaultCellStyle.Font.Size + 2)
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         DashboardForm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        If e.RowIndex >= 0 Then
+            Dim selectedRow As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+
+            txtfullname.Text = selectedRow.Cells("Full Name").Value.ToString()
+            cbsex.SelectedItem = selectedRow.Cells("Sex").Value.ToString()
+            txtage.Text = selectedRow.Cells("Age").Value.ToString()
+            txtaddress.Text = selectedRow.Cells("Address").Value.ToString()
+            txtcontactno.Text = selectedRow.Cells("Contact").Value.ToString()
+        End If
     End Sub
 End Class

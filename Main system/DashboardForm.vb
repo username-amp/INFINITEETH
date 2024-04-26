@@ -1,4 +1,6 @@
-﻿Public Class DashboardForm
+﻿Imports System.Diagnostics.Eventing.Reader
+
+Public Class DashboardForm
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
@@ -8,7 +10,17 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        PatientForm.ShowDialog()
+        PatientForm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Me.Hide()
+        Form1.Show()
+
+    End Sub
+
+    Private Sub DashboardForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

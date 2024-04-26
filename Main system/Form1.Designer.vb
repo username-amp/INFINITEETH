@@ -67,7 +67,7 @@ Partial Class Form1
         '
         'Panel3
         '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel3.Controls.Add(Me.TextBox2)
         Me.Panel3.Location = New System.Drawing.Point(100, 260)
         Me.Panel3.Name = "Panel3"
@@ -86,7 +86,7 @@ Partial Class Form1
         '
         'Panel2
         '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Location = New System.Drawing.Point(100, 194)
         Me.Panel2.Name = "Panel2"
