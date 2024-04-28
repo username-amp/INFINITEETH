@@ -41,7 +41,7 @@ Partial Class DashboardForm
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Beige
+        Me.Panel1.BackColor = System.Drawing.Color.Ivory
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.Button4)
@@ -55,7 +55,8 @@ Partial Class DashboardForm
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Bahnschrift Condensed", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Beige
@@ -72,7 +73,8 @@ Partial Class DashboardForm
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Bahnschrift Condensed", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.Beige
@@ -89,7 +91,8 @@ Partial Class DashboardForm
         'Button7
         '
         Me.Button7.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
+        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Bahnschrift Condensed", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.Beige
@@ -106,7 +109,8 @@ Partial Class DashboardForm
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Bahnschrift Condensed", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Beige
@@ -115,7 +119,7 @@ Partial Class DashboardForm
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(282, 80)
         Me.Button3.TabIndex = 0
-        Me.Button3.Text = "PATIENT"
+        Me.Button3.Text = "ADD PATIENT"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button3.UseVisualStyleBackColor = False
@@ -123,22 +127,22 @@ Partial Class DashboardForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.DarkBlue
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Ivory
         Me.Label1.Location = New System.Drawing.Point(65, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(167, 36)
+        Me.Label1.Size = New System.Drawing.Size(185, 40)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "DASHBOARD"
         '
         'Button9
         '
-        Me.Button9.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button9.BackColor = System.Drawing.Color.Transparent
         Me.Button9.BackgroundImage = CType(resources.GetObject("Button9.BackgroundImage"), System.Drawing.Image)
         Me.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.Button9.Location = New System.Drawing.Point(3, 404)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(56, 39)
@@ -147,11 +151,11 @@ Partial Class DashboardForm
         '
         'Button8
         '
-        Me.Button8.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button8.BackColor = System.Drawing.Color.Transparent
         Me.Button8.BackgroundImage = CType(resources.GetObject("Button8.BackgroundImage"), System.Drawing.Image)
         Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.Button8.Location = New System.Drawing.Point(3, 357)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(56, 39)
@@ -160,11 +164,11 @@ Partial Class DashboardForm
         '
         'Button6
         '
-        Me.Button6.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button6.BackColor = System.Drawing.Color.Transparent
         Me.Button6.BackgroundImage = CType(resources.GetObject("Button6.BackgroundImage"), System.Drawing.Image)
         Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.Button6.Location = New System.Drawing.Point(3, 306)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(56, 33)
@@ -197,6 +201,7 @@ Partial Class DashboardForm
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(3, 2)
@@ -210,6 +215,7 @@ Partial Class DashboardForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkBlue
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(783, 457)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
