@@ -9,12 +9,13 @@ Public Class SessionForm
     Public dt As New DataTable
     Dim dr As MySqlDataReader
 
+
     Private Sub SessionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            LoadSessionsFromDatabase()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+
+        LoadSessionsFromDatabase()
+        Guna2DateTimePicker1.Format = DateTimePickerFormat.Custom
+        Guna2DateTimePicker1.CustomFormat = "hh:mm tt"
+        Guna2DateTimePicker1.ShowUpDown = True
     End Sub
 
     Private Sub LoadSessionsFromDatabase()
@@ -43,17 +44,20 @@ Public Class SessionForm
         cmd.Parameters.AddWithValue("@client", txtclient.Text)
         cmd.Parameters.AddWithValue("@service", txtservice.Text)
         cmd.Parameters.AddWithValue("@date", DateTimePicker1.Value.Date)
-        cmd.Parameters.AddWithValue("@time", comboboxtime.SelectedItem.ToString())
+
+        Dim formattedTime As String = Guna2DateTimePicker1.Value.ToString("hh:mm tt")
+        cmd.Parameters.AddWithValue("@time", formattedTime)
+
         Dim selectedDay As String = DateTimePicker1.Value.DayOfWeek.ToString()
         cmd.Parameters.AddWithValue("@day", selectedDay)
         cmd.ExecuteNonQuery()
         con.Close()
 
-        ' Reload sessions after inserting
         LoadSessionsFromDatabase()
 
         MessageBox.Show("Data inserted successfully.")
     End Sub
+
 
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 

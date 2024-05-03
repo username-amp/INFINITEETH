@@ -33,7 +33,7 @@ Public Class Calendar
         DataGridView1.Columns("AppointmentColumn").Width = 200
 
         ' Add rows
-        For i As Integer = 8 To 17 ' assuming 8 AM to 5 PM
+        For i As Integer = 8 To 17
             Dim time As String = i.ToString("00") & ":00"
             DataGridView1.Rows.Add(DateTime.Today.ToShortDateString(), time, "")
         Next

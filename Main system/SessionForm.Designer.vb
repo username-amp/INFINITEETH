@@ -23,15 +23,13 @@ Partial Class SessionForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.day_of_weak = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.btnSubmit = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.comboboxtime = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtservice = New Guna.UI2.WinForms.Guna2TextBox()
@@ -44,6 +42,7 @@ Partial Class SessionForm
         Me.Guna2Shapes1 = New Guna.UI2.WinForms.Guna2Shapes()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Guna2DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2GradientPanel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,10 +52,9 @@ Partial Class SessionForm
         '
         Me.Guna2Panel1.AutoScroll = True
         Me.Guna2Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2Panel1.Controls.Add(Me.Guna2DateTimePicker1)
         Me.Guna2Panel1.Controls.Add(Me.day_of_weak)
         Me.Guna2Panel1.Controls.Add(Me.btnSubmit)
-        Me.Guna2Panel1.Controls.Add(Me.Label4)
-        Me.Guna2Panel1.Controls.Add(Me.comboboxtime)
         Me.Guna2Panel1.Controls.Add(Me.DateTimePicker1)
         Me.Guna2Panel1.Controls.Add(Me.Label3)
         Me.Guna2Panel1.Controls.Add(Me.txtservice)
@@ -101,32 +99,6 @@ Partial Class SessionForm
         Me.btnSubmit.Size = New System.Drawing.Size(180, 45)
         Me.btnSubmit.TabIndex = 17
         Me.btnSubmit.Text = "Submit"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(38, 922)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 18)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Time"
-        '
-        'comboboxtime
-        '
-        Me.comboboxtime.BackColor = System.Drawing.Color.Transparent
-        Me.comboboxtime.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.comboboxtime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.comboboxtime.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.comboboxtime.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.comboboxtime.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.comboboxtime.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.comboboxtime.ItemHeight = 30
-        Me.comboboxtime.Items.AddRange(New Object() {"9am-10pm", "8am", "7pm"})
-        Me.comboboxtime.Location = New System.Drawing.Point(41, 943)
-        Me.comboboxtime.Name = "comboboxtime"
-        Me.comboboxtime.Size = New System.Drawing.Size(200, 36)
-        Me.comboboxtime.TabIndex = 15
         '
         'DateTimePicker1
         '
@@ -244,43 +216,43 @@ Partial Class SessionForm
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.ColumnHeadersHeight = 30
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DataGridView1.Location = New System.Drawing.Point(0, 37)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowTemplate.Height = 50
         Me.DataGridView1.Size = New System.Drawing.Size(889, 357)
@@ -332,6 +304,19 @@ Partial Class SessionForm
         '
         Me.Guna2Elipse1.TargetControl = Me
         '
+        'Guna2DateTimePicker1
+        '
+        Me.Guna2DateTimePicker1.Checked = True
+        Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(347, 943)
+        Me.Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        Me.Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
+        Me.Guna2DateTimePicker1.Size = New System.Drawing.Size(200, 36)
+        Me.Guna2DateTimePicker1.TabIndex = 19
+        Me.Guna2DateTimePicker1.Value = New Date(2024, 5, 3, 15, 20, 40, 474)
+        '
         'SessionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -361,10 +346,9 @@ Partial Class SessionForm
     Friend WithEvents txtclient As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents txtdentist As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents comboboxtime As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents DateTimePicker1 As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents btnSubmit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents day_of_weak As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Guna2DateTimePicker1 As Guna.UI2.WinForms.Guna2DateTimePicker
 End Class

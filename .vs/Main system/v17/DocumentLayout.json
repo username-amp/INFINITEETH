@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\appoinmentform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\appoinmentform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|c:\\users\\lenovo\\onedrive\\pictures\\desktop\\infiniteeth\\main system\\sessionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\sessionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\sessionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\sessionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\databaseconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\databaseconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\doctorform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\doctorform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\doctorform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -19,11 +27,8 @@
       "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\loadingform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Main system||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\sessionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\sessionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\appoinmentform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\appoinmentform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\appoinmentform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -34,16 +39,16 @@
       "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\calendar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\loadingform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\loadingform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\calendar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\calendar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\main system\\patientform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{2E883BCD-0BF5-4693-A53F-8F53D24051FD}|Main system\\Main system.vbproj|solutionrelative:main system\\patientform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,34 +58,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Main system",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\Main system.vbproj",
-              "RelativeDocumentMoniker": "Main system\\Main system.vbproj",
-              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\Main system.vbproj*",
-              "RelativeToolTip": "Main system\\Main system.vbproj*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-03T04:56:49.248Z"
+              "DocumentIndex": 0,
+              "Title": "SessionForm.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\SessionForm.vb",
+              "RelativeDocumentMoniker": "Main system\\SessionForm.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\SessionForm.vb",
+              "RelativeToolTip": "Main system\\SessionForm.vb",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-02T03:09:35.868Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DatabaseConnection.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\DatabaseConnection.vb",
+              "RelativeDocumentMoniker": "Main system\\DatabaseConnection.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\DatabaseConnection.vb",
+              "RelativeToolTip": "Main system\\DatabaseConnection.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-03T11:29:48.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppoinmentForm.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\AppoinmentForm.vb",
+              "RelativeDocumentMoniker": "Main system\\AppoinmentForm.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\AppoinmentForm.vb",
+              "RelativeToolTip": "Main system\\AppoinmentForm.vb",
+              "ViewState": "AQIAAAoAAAAAqKfsUZ4kwAcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-03T10:03:11.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "loadingForm.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\loadingForm.vb",
+              "RelativeDocumentMoniker": "Main system\\loadingForm.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\loadingForm.vb",
+              "RelativeToolTip": "Main system\\loadingForm.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-03T09:49:24.314Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "AppoinmentForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\AppoinmentForm.vb",
+              "RelativeDocumentMoniker": "Main system\\AppoinmentForm.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\AppoinmentForm.vb [Design]",
+              "RelativeToolTip": "Main system\\AppoinmentForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-03T07:29:32.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Calendar.vb",
               "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\Calendar.vb",
               "RelativeDocumentMoniker": "Main system\\Calendar.vb",
               "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\Calendar.vb",
               "RelativeToolTip": "Main system\\Calendar.vb",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAwwB0AAAAbAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAwwCMAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-05-02T15:53:53.585Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "loadingForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\loadingForm.vb",
               "RelativeDocumentMoniker": "Main system\\loadingForm.vb",
@@ -91,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "DoctorForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\DoctorForm.vb",
               "RelativeDocumentMoniker": "Main system\\DoctorForm.vb",
@@ -102,56 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppoinmentForm.vb",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\AppoinmentForm.vb",
-              "RelativeDocumentMoniker": "Main system\\AppoinmentForm.vb",
-              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\AppoinmentForm.vb",
-              "RelativeToolTip": "Main system\\AppoinmentForm.vb",
-              "ViewState": "AQIAANgAAAAAw3WJYr8dwBIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-02T12:08:40.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AppoinmentForm.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\AppoinmentForm.vb",
-              "RelativeDocumentMoniker": "Main system\\AppoinmentForm.vb",
-              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\AppoinmentForm.vb [Design]",
-              "RelativeToolTip": "Main system\\AppoinmentForm.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-02T12:07:29.106Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PatientForm.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\PatientForm.vb",
-              "RelativeDocumentMoniker": "Main system\\PatientForm.vb",
-              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\PatientForm.vb [Design]",
-              "RelativeToolTip": "Main system\\PatientForm.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-02T07:07:40.739Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SessionForm.vb",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\SessionForm.vb",
-              "RelativeDocumentMoniker": "Main system\\SessionForm.vb",
-              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\SessionForm.vb",
-              "RelativeToolTip": "Main system\\SessionForm.vb",
-              "ViewState": "AQIAAAIAAAAQ4lzHKM4pwBYAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-02T03:09:35.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "SessionForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\SessionForm.vb",
               "RelativeDocumentMoniker": "Main system\\SessionForm.vb",
@@ -162,7 +168,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
+              "Title": "DoctorForm.vb",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\DoctorForm.vb",
+              "RelativeDocumentMoniker": "Main system\\DoctorForm.vb",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\DoctorForm.vb",
+              "RelativeToolTip": "Main system\\DoctorForm.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-03T09:49:29.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\Form1.vb",
               "RelativeDocumentMoniker": "Main system\\Form1.vb",
@@ -173,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Calendar.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Pictures\\Desktop\\INFINITEETH\\Main system\\Calendar.vb",
               "RelativeDocumentMoniker": "Main system\\Calendar.vb",
