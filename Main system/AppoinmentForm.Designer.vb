@@ -22,283 +22,494 @@ Partial Class AppoinmentForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AppoinmentForm))
-        Me.panel1 = New System.Windows.Forms.Panel()
-        Me.btnLoad = New System.Windows.Forms.Button()
-        Me.lblPending = New System.Windows.Forms.Label()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblRejected = New System.Windows.Forms.Label()
         Me.lblApproved = New System.Windows.Forms.Label()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.txtTime = New System.Windows.Forms.TextBox()
-        Me.txtDentist = New System.Windows.Forms.TextBox()
-        Me.txtService = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnReject = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btnApprove = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.btnLoad = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnReject = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnApprove = New Guna.UI2.WinForms.Guna2Button()
+        Me.txtSearch = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.DataGridView2 = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.pbApprove = New Guna.UI2.WinForms.Guna2ProgressBar()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.pbReject = New Guna.UI2.WinForms.Guna2ProgressBar()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lblPending = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.pbPending = New Guna.UI2.WinForms.Guna2ProgressBar()
+        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel1.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel2.SuspendLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel3.SuspendLayout()
+        Me.Guna2Panel4.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'panel1
-        '
-        Me.panel1.BackColor = System.Drawing.Color.Ivory
-        Me.panel1.Controls.Add(Me.btnLoad)
-        Me.panel1.Controls.Add(Me.lblPending)
-        Me.panel1.Controls.Add(Me.lblRejected)
-        Me.panel1.Controls.Add(Me.lblApproved)
-        Me.panel1.Controls.Add(Me.btnAdd)
-        Me.panel1.Controls.Add(Me.txtTime)
-        Me.panel1.Controls.Add(Me.txtDentist)
-        Me.panel1.Controls.Add(Me.txtService)
-        Me.panel1.Controls.Add(Me.Label4)
-        Me.panel1.Controls.Add(Me.Label3)
-        Me.panel1.Controls.Add(Me.Label2)
-        Me.panel1.Controls.Add(Me.btnReject)
-        Me.panel1.Controls.Add(Me.DataGridView1)
-        Me.panel1.Controls.Add(Me.btnApprove)
-        Me.panel1.Location = New System.Drawing.Point(3, 61)
-        Me.panel1.Name = "panel1"
-        Me.panel1.Size = New System.Drawing.Size(941, 515)
-        Me.panel1.TabIndex = 0
-        '
-        'btnLoad
-        '
-        Me.btnLoad.BackColor = System.Drawing.Color.DarkGoldenrod
-        Me.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLoad.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLoad.ForeColor = System.Drawing.Color.White
-        Me.btnLoad.Location = New System.Drawing.Point(612, 229)
-        Me.btnLoad.Name = "btnLoad"
-        Me.btnLoad.Size = New System.Drawing.Size(98, 39)
-        Me.btnLoad.TabIndex = 21
-        Me.btnLoad.Text = "LOAD"
-        Me.btnLoad.UseVisualStyleBackColor = False
-        '
-        'lblPending
-        '
-        Me.lblPending.AutoSize = True
-        Me.lblPending.BackColor = System.Drawing.Color.Gold
-        Me.lblPending.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPending.Location = New System.Drawing.Point(395, 405)
-        Me.lblPending.Name = "lblPending"
-        Me.lblPending.Size = New System.Drawing.Size(96, 25)
-        Me.lblPending.TabIndex = 20
-        Me.lblPending.Text = "Label10"
         '
         'lblRejected
         '
         Me.lblRejected.AutoSize = True
-        Me.lblRejected.BackColor = System.Drawing.Color.Gold
-        Me.lblRejected.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRejected.Location = New System.Drawing.Point(259, 405)
+        Me.lblRejected.BackColor = System.Drawing.Color.Transparent
+        Me.lblRejected.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRejected.ForeColor = System.Drawing.Color.DimGray
+        Me.lblRejected.Location = New System.Drawing.Point(76, 41)
         Me.lblRejected.Name = "lblRejected"
-        Me.lblRejected.Size = New System.Drawing.Size(83, 25)
+        Me.lblRejected.Size = New System.Drawing.Size(62, 23)
         Me.lblRejected.TabIndex = 19
         Me.lblRejected.Text = "Label9"
         '
         'lblApproved
         '
         Me.lblApproved.AutoSize = True
-        Me.lblApproved.BackColor = System.Drawing.Color.Gold
-        Me.lblApproved.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApproved.Location = New System.Drawing.Point(123, 405)
+        Me.lblApproved.BackColor = System.Drawing.Color.Transparent
+        Me.lblApproved.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblApproved.ForeColor = System.Drawing.Color.Ivory
+        Me.lblApproved.Location = New System.Drawing.Point(72, 41)
         Me.lblApproved.Name = "lblApproved"
-        Me.lblApproved.Size = New System.Drawing.Size(83, 25)
+        Me.lblApproved.Size = New System.Drawing.Size(62, 23)
         Me.lblApproved.TabIndex = 18
         Me.lblApproved.Text = "Label8"
         '
-        'btnAdd
+        'Label7
         '
-        Me.btnAdd.BackColor = System.Drawing.Color.Green
-        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(623, 317)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(98, 39)
-        Me.btnAdd.TabIndex = 14
-        Me.btnAdd.Text = "ADD"
-        Me.btnAdd.UseVisualStyleBackColor = False
-        '
-        'txtTime
-        '
-        Me.txtTime.Location = New System.Drawing.Point(425, 328)
-        Me.txtTime.Name = "txtTime"
-        Me.txtTime.Size = New System.Drawing.Size(100, 20)
-        Me.txtTime.TabIndex = 13
-        '
-        'txtDentist
-        '
-        Me.txtDentist.Location = New System.Drawing.Point(233, 328)
-        Me.txtDentist.Name = "txtDentist"
-        Me.txtDentist.Size = New System.Drawing.Size(100, 20)
-        Me.txtDentist.TabIndex = 12
-        '
-        'txtService
-        '
-        Me.txtService.Location = New System.Drawing.Point(104, 328)
-        Me.txtService.Name = "txtService"
-        Me.txtService.Size = New System.Drawing.Size(100, 20)
-        Me.txtService.TabIndex = 11
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(465, 312)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(26, 13)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "time"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(248, 312)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(38, 13)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "dentist"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(101, 312)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 13)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "services"
-        '
-        'btnReject
-        '
-        Me.btnReject.BackColor = System.Drawing.Color.Red
-        Me.btnReject.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReject.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReject.ForeColor = System.Drawing.Color.White
-        Me.btnReject.Location = New System.Drawing.Point(493, 229)
-        Me.btnReject.Name = "btnReject"
-        Me.btnReject.Size = New System.Drawing.Size(98, 39)
-        Me.btnReject.TabIndex = 7
-        Me.btnReject.Text = "REJECT"
-        Me.btnReject.UseVisualStyleBackColor = False
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Kristen ITC", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(6, 9)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(192, 33)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "Appointments"
         '
         'DataGridView1
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Ivory
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(101, 21)
+        Me.DataGridView1.AllowUserToResizeRows = False
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
+        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
+        Me.DataGridView1.ColumnHeadersHeight = 50
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle19
+        Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 257)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(575, 183)
-        Me.DataGridView1.TabIndex = 6
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle20
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.RowTemplate.Height = 50
+        Me.DataGridView1.Size = New System.Drawing.Size(905, 246)
+        Me.DataGridView1.TabIndex = 33
+        Me.DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Silver
+        Me.DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        Me.DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DataGridView1.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.DataGridView1.ThemeStyle.HeaderStyle.Height = 50
+        Me.DataGridView1.ThemeStyle.ReadOnly = True
+        Me.DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.SystemColors.Window
+        Me.DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DataGridView1.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.DataGridView1.ThemeStyle.RowsStyle.Height = 50
+        Me.DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Yellow
+        Me.DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
+        '
+        'btnLoad
+        '
+        Me.btnLoad.BorderColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(36, Byte), Integer))
+        Me.btnLoad.BorderRadius = 10
+        Me.btnLoad.CustomBorderColor = System.Drawing.Color.Gray
+        Me.btnLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLoad.FillColor = System.Drawing.Color.Gray
+        Me.btnLoad.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLoad.ForeColor = System.Drawing.Color.White
+        Me.btnLoad.Location = New System.Drawing.Point(430, 509)
+        Me.btnLoad.Name = "btnLoad"
+        Me.btnLoad.Size = New System.Drawing.Size(96, 45)
+        Me.btnLoad.TabIndex = 32
+        Me.btnLoad.Text = "Load"
+        '
+        'btnReject
+        '
+        Me.btnReject.BorderColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(36, Byte), Integer))
+        Me.btnReject.BorderRadius = 10
+        Me.btnReject.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(36, Byte), Integer))
+        Me.btnReject.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnReject.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnReject.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnReject.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnReject.FillColor = System.Drawing.Color.DimGray
+        Me.btnReject.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReject.ForeColor = System.Drawing.Color.LightCoral
+        Me.btnReject.Location = New System.Drawing.Point(321, 509)
+        Me.btnReject.Name = "btnReject"
+        Me.btnReject.Size = New System.Drawing.Size(96, 45)
+        Me.btnReject.TabIndex = 31
+        Me.btnReject.Text = "Reject"
         '
         'btnApprove
         '
-        Me.btnApprove.BackColor = System.Drawing.Color.Green
-        Me.btnApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnApprove.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnApprove.ForeColor = System.Drawing.Color.White
-        Me.btnApprove.Location = New System.Drawing.Point(374, 229)
+        Me.btnApprove.BorderColor = System.Drawing.Color.SteelBlue
+        Me.btnApprove.BorderRadius = 10
+        Me.btnApprove.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(36, Byte), Integer))
+        Me.btnApprove.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnApprove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnApprove.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnApprove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnApprove.FillColor = System.Drawing.Color.White
+        Me.btnApprove.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnApprove.ForeColor = System.Drawing.Color.DimGray
+        Me.btnApprove.Location = New System.Drawing.Point(212, 509)
         Me.btnApprove.Name = "btnApprove"
-        Me.btnApprove.Size = New System.Drawing.Size(98, 39)
-        Me.btnApprove.TabIndex = 5
-        Me.btnApprove.Text = "APPROVE"
-        Me.btnApprove.UseVisualStyleBackColor = False
+        Me.btnApprove.Size = New System.Drawing.Size(96, 45)
+        Me.btnApprove.TabIndex = 30
+        Me.btnApprove.Text = "Approve"
+        '
+        'txtSearch
+        '
+        Me.txtSearch.BorderColor = System.Drawing.SystemColors.Control
+        Me.txtSearch.BorderRadius = 10
+        Me.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtSearch.DefaultText = ""
+        Me.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtSearch.IconLeft = CType(resources.GetObject("txtSearch.IconLeft"), System.Drawing.Image)
+        Me.txtSearch.Location = New System.Drawing.Point(12, 206)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtSearch.PlaceholderText = "Search"
+        Me.txtSearch.SelectedText = ""
+        Me.txtSearch.Size = New System.Drawing.Size(905, 36)
+        Me.txtSearch.TabIndex = 29
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToResizeRows = False
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
+        Me.DataGridView2.ColumnHeadersHeight = 50
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle23
+        Me.DataGridView2.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridView2.Location = New System.Drawing.Point(12, 631)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle24
+        Me.DataGridView2.RowHeadersVisible = False
+        Me.DataGridView2.RowTemplate.Height = 50
+        Me.DataGridView2.Size = New System.Drawing.Size(905, 266)
+        Me.DataGridView2.TabIndex = 0
+        Me.DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.DataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DataGridView2.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.DataGridView2.ThemeStyle.HeaderStyle.Height = 50
+        Me.DataGridView2.ThemeStyle.ReadOnly = True
+        Me.DataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DataGridView2.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DataGridView2.ThemeStyle.RowsStyle.Height = 50
+        Me.DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.BorderRadius = 20
+        Me.Guna2Panel1.Controls.Add(Me.pbApprove)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2PictureBox1)
+        Me.Guna2Panel1.Controls.Add(Me.lblApproved)
+        Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(162, Byte), Integer))
+        Me.Guna2Panel1.Location = New System.Drawing.Point(31, 59)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(199, 126)
+        Me.Guna2Panel1.TabIndex = 8
+        '
+        'pbApprove
+        '
+        Me.pbApprove.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(162, Byte), Integer))
+        Me.pbApprove.BorderRadius = 5
+        Me.pbApprove.FillColor = System.Drawing.Color.LightGray
+        Me.pbApprove.Location = New System.Drawing.Point(9, 95)
+        Me.pbApprove.Name = "pbApprove"
+        Me.pbApprove.ProgressColor = System.Drawing.Color.Cyan
+        Me.pbApprove.ProgressColor2 = System.Drawing.Color.Cyan
+        Me.pbApprove.Size = New System.Drawing.Size(180, 10)
+        Me.pbApprove.TabIndex = 36
+        Me.pbApprove.Text = "Guna2ProgressBar1"
+        Me.pbApprove.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(13, 27)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(53, 46)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 19
+        Me.Guna2PictureBox1.TabStop = False
+        '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2Panel2.BorderRadius = 20
+        Me.Guna2Panel2.Controls.Add(Me.pbReject)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2PictureBox2)
+        Me.Guna2Panel2.Controls.Add(Me.lblRejected)
+        Me.Guna2Panel2.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel2.Location = New System.Drawing.Point(236, 59)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.Size = New System.Drawing.Size(199, 126)
+        Me.Guna2Panel2.TabIndex = 9
+        '
+        'pbReject
+        '
+        Me.pbReject.BackColor = System.Drawing.Color.White
+        Me.pbReject.BorderRadius = 5
+        Me.pbReject.FillColor = System.Drawing.Color.LightGray
+        Me.pbReject.Location = New System.Drawing.Point(19, 95)
+        Me.pbReject.Name = "pbReject"
+        Me.pbReject.ProgressColor = System.Drawing.Color.Cyan
+        Me.pbReject.ProgressColor2 = System.Drawing.Color.Cyan
+        Me.pbReject.Size = New System.Drawing.Size(167, 10)
+        Me.pbReject.TabIndex = 37
+        Me.pbReject.Text = "Guna2ProgressBar2"
+        Me.pbReject.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(13, 23)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(64, 62)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox2.TabIndex = 20
+        Me.Guna2PictureBox2.TabStop = False
+        '
+        'lblPending
+        '
+        Me.lblPending.AutoSize = True
+        Me.lblPending.BackColor = System.Drawing.Color.Transparent
+        Me.lblPending.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPending.ForeColor = System.Drawing.Color.DimGray
+        Me.lblPending.Location = New System.Drawing.Point(74, 41)
+        Me.lblPending.Name = "lblPending"
+        Me.lblPending.Size = New System.Drawing.Size(72, 23)
+        Me.lblPending.TabIndex = 20
+        Me.lblPending.Text = "Label10"
+        '
+        'Guna2PictureBox3
+        '
+        Me.Guna2PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.Image = CType(resources.GetObject("Guna2PictureBox3.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox3.ImageRotate = 0!
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(17, 27)
+        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
+        Me.Guna2PictureBox3.Size = New System.Drawing.Size(51, 46)
+        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox3.TabIndex = 21
+        Me.Guna2PictureBox3.TabStop = False
+        '
+        'Guna2Panel3
+        '
+        Me.Guna2Panel3.BorderRadius = 20
+        Me.Guna2Panel3.Controls.Add(Me.pbPending)
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox3)
+        Me.Guna2Panel3.Controls.Add(Me.lblPending)
+        Me.Guna2Panel3.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Location = New System.Drawing.Point(441, 59)
+        Me.Guna2Panel3.Name = "Guna2Panel3"
+        Me.Guna2Panel3.Size = New System.Drawing.Size(199, 126)
+        Me.Guna2Panel3.TabIndex = 10
+        '
+        'pbPending
+        '
+        Me.pbPending.BackColor = System.Drawing.Color.White
+        Me.pbPending.BorderRadius = 5
+        Me.pbPending.FillColor = System.Drawing.Color.LightGray
+        Me.pbPending.Location = New System.Drawing.Point(17, 95)
+        Me.pbPending.Name = "pbPending"
+        Me.pbPending.ProgressColor = System.Drawing.Color.Cyan
+        Me.pbPending.ProgressColor2 = System.Drawing.Color.Cyan
+        Me.pbPending.Size = New System.Drawing.Size(170, 10)
+        Me.pbPending.TabIndex = 38
+        Me.pbPending.Text = "Guna2ProgressBar3"
+        Me.pbPending.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        '
+        'Guna2Panel4
+        '
+        Me.Guna2Panel4.AutoScroll = True
+        Me.Guna2Panel4.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2Panel4.Controls.Add(Me.Label1)
+        Me.Guna2Panel4.Controls.Add(Me.DataGridView1)
+        Me.Guna2Panel4.Controls.Add(Me.DataGridView2)
+        Me.Guna2Panel4.Controls.Add(Me.Label7)
+        Me.Guna2Panel4.Controls.Add(Me.btnLoad)
+        Me.Guna2Panel4.Controls.Add(Me.btnReject)
+        Me.Guna2Panel4.Controls.Add(Me.btnApprove)
+        Me.Guna2Panel4.Controls.Add(Me.Guna2Panel3)
+        Me.Guna2Panel4.Controls.Add(Me.txtSearch)
+        Me.Guna2Panel4.Controls.Add(Me.Guna2Panel2)
+        Me.Guna2Panel4.Controls.Add(Me.Guna2Panel1)
+        Me.Guna2Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel4.Name = "Guna2Panel4"
+        Me.Guna2Panel4.Size = New System.Drawing.Size(937, 613)
+        Me.Guna2Panel4.TabIndex = 35
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Beige
-        Me.Label1.Location = New System.Drawing.Point(82, 16)
+        Me.Label1.Font = New System.Drawing.Font("Kristen ITC", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 595)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(241, 31)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "APPOINTMENTS"
-        '
-        'Button2
-        '
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button2.Location = New System.Drawing.Point(925, -1)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(19, 16)
-        Me.Button2.TabIndex = 20
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button1.Location = New System.Drawing.Point(905, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(14, 11)
-        Me.Button1.TabIndex = 19
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.Color.Transparent
-        Me.Button9.BackgroundImage = CType(resources.GetObject("Button9.BackgroundImage"), System.Drawing.Image)
-        Me.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.Button9.Location = New System.Drawing.Point(12, 12)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(56, 39)
-        Me.Button9.TabIndex = 18
-        Me.Button9.UseVisualStyleBackColor = False
+        Me.Label1.Size = New System.Drawing.Size(109, 33)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "History"
         '
         'AppoinmentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkBlue
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(946, 581)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.panel1)
-        Me.Controls.Add(Me.Label1)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(937, 611)
+        Me.Controls.Add(Me.Guna2Panel4)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "AppoinmentForm"
         Me.Text = " "
-        Me.panel1.ResumeLayout(False)
-        Me.panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel1.PerformLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel3.ResumeLayout(False)
+        Me.Guna2Panel3.PerformLayout()
+        Me.Guna2Panel4.ResumeLayout(False)
+        Me.Guna2Panel4.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents panel1 As Panel
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents btnApprove As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnReject As Button
-    Friend WithEvents txtService As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtTime As TextBox
-    Friend WithEvents txtDentist As TextBox
-    Friend WithEvents btnAdd As Button
-    Friend WithEvents lblPending As Label
     Friend WithEvents lblRejected As Label
     Friend WithEvents lblApproved As Label
-    Friend WithEvents btnLoad As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents txtSearch As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents btnApprove As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnLoad As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnReject As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblPending As Label
+    Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Guna2DataGridViewStyler1 As Guna.UI2.WinForms.Guna2DataGridViewStyler
+    Friend WithEvents DataGridView2 As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents pbApprove As Guna.UI2.WinForms.Guna2ProgressBar
+    Friend WithEvents pbReject As Guna.UI2.WinForms.Guna2ProgressBar
+    Friend WithEvents pbPending As Guna.UI2.WinForms.Guna2ProgressBar
+    Friend WithEvents Guna2DataGridViewStyler2 As Guna.UI2.WinForms.Guna2DataGridViewStyler
+    Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label1 As Label
 End Class

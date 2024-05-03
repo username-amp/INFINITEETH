@@ -28,7 +28,6 @@ C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\Syst
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Buffers.dll
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main system.vbproj.AssemblyReference.cache
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.AppoinmentForm.resources
-C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.DashboardForm.resources
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.DoctorForm.resources
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.Form1.resources
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.loadingForm.resources
@@ -41,3 +40,28 @@ C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main system.exe
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main system.xml
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main system.pdb
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.SessionForm.resources
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\Guna.UI2.dll
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.Main.resources
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\RestSharp.dll
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.CodeDom.dll
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Text.Json.dll
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.ValueTuple.dll
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\Bunifu.UI.WinForms.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\RestSharp.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Buffers.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.CodeDom.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Memory.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Text.Json.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.ValueTuple.xml
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.Calendar.resources
