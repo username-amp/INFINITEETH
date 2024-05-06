@@ -65,3 +65,4 @@ C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\Syst
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.ValueTuple.xml
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.Calendar.resources
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.SessionAppointment.resources

@@ -131,12 +131,6 @@
     <Compile Include="AppoinmentForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Calendar.Designer.vb">
-      <DependentUpon>Calendar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Calendar.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </Compile>
@@ -191,10 +185,10 @@
     <Compile Include="PatientForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RecordForm.Designer.vb">
-      <DependentUpon>RecordForm.vb</DependentUpon>
+    <Compile Include="SessionAppointment.Designer.vb">
+      <DependentUpon>SessionAppointment.vb</DependentUpon>
     </Compile>
-    <Compile Include="RecordForm.vb">
+    <Compile Include="SessionAppointment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SessionForm.Designer.vb">
@@ -207,9 +201,6 @@
   <ItemGroup>
     <EmbeddedResource Include="AppoinmentForm.resx">
       <DependentUpon>AppoinmentForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Calendar.resx">
-      <DependentUpon>Calendar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
@@ -232,8 +223,8 @@
     <EmbeddedResource Include="PatientForm.resx">
       <DependentUpon>PatientForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RecordForm.resx">
-      <DependentUpon>RecordForm.vb</DependentUpon>
+    <EmbeddedResource Include="SessionAppointment.resx">
+      <DependentUpon>SessionAppointment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SessionForm.resx">
       <DependentUpon>SessionForm.vb</DependentUpon>

@@ -1,15 +1,7 @@
 ﻿Public Class Form1
-
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
-
-
-
-
-
-
     Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
         If TextBox1.Text = "" OrElse TextBox2.Text = "" Then
             MessageBox.Show("Please enter both username and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -35,6 +27,5 @@
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
-
 
 End Class

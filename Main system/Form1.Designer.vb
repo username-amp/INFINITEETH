@@ -32,16 +32,22 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
+        Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Me.Guna2GradientPanel2 = New Guna.UI2.WinForms.Guna2GradientPanel()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2GradientPanel1.SuspendLayout()
+        Me.Guna2GradientPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2PictureBox1
         '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(3, 1)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(99, 57)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(653, 612)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(441, 484)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Guna2PictureBox1.TabIndex = 6
         Me.Guna2PictureBox1.TabStop = False
@@ -62,7 +68,7 @@ Partial Class Form1
         Me.Guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.Guna2GradientButton1.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton1.Location = New System.Drawing.Point(688, 401)
+        Me.Guna2GradientButton1.Location = New System.Drawing.Point(84, 228)
         Me.Guna2GradientButton1.Name = "Guna2GradientButton1"
         Me.Guna2GradientButton1.Size = New System.Drawing.Size(126, 39)
         Me.Guna2GradientButton1.TabIndex = 9
@@ -70,6 +76,7 @@ Partial Class Form1
         '
         'Guna2Button1
         '
+        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Button1.BackgroundImage = CType(resources.GetObject("Guna2Button1.BackgroundImage"), System.Drawing.Image)
         Me.Guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -79,13 +86,14 @@ Partial Class Form1
         Me.Guna2Button1.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(909, 1)
+        Me.Guna2Button1.Location = New System.Drawing.Point(906, 3)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(21, 24)
         Me.Guna2Button1.TabIndex = 10
         '
         'Guna2Button2
         '
+        Me.Guna2Button2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Button2.BackgroundImage = CType(resources.GetObject("Guna2Button2.BackgroundImage"), System.Drawing.Image)
         Me.Guna2Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -95,7 +103,7 @@ Partial Class Form1
         Me.Guna2Button2.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(936, 1)
+        Me.Guna2Button2.Location = New System.Drawing.Point(933, 3)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(25, 22)
         Me.Guna2Button2.TabIndex = 11
@@ -104,7 +112,8 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Gill Sans Ultra Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(640, 201)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(53, 47)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(205, 33)
         Me.Label1.TabIndex = 12
@@ -124,7 +133,7 @@ Partial Class Form1
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TextBox1.IconLeft = CType(resources.GetObject("TextBox1.IconLeft"), System.Drawing.Image)
-        Me.TextBox1.Location = New System.Drawing.Point(618, 244)
+        Me.TextBox1.Location = New System.Drawing.Point(31, 90)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -147,14 +156,43 @@ Partial Class Form1
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TextBox2.IconLeft = CType(resources.GetObject("TextBox2.IconLeft"), System.Drawing.Image)
-        Me.TextBox2.Location = New System.Drawing.Point(618, 308)
+        Me.TextBox2.Location = New System.Drawing.Point(31, 154)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.PlaceholderText = "Password"
         Me.TextBox2.SelectedText = ""
         Me.TextBox2.Size = New System.Drawing.Size(241, 54)
         Me.TextBox2.TabIndex = 15
+        '
+        'Guna2GradientPanel1
+        '
+        Me.Guna2GradientPanel1.Controls.Add(Me.Guna2GradientPanel2)
+        Me.Guna2GradientPanel1.Controls.Add(Me.Guna2Button1)
+        Me.Guna2GradientPanel1.Controls.Add(Me.Guna2Button2)
+        Me.Guna2GradientPanel1.Controls.Add(Me.Guna2PictureBox1)
+        Me.Guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Guna2GradientPanel1.FillColor = System.Drawing.Color.Blue
+        Me.Guna2GradientPanel1.FillColor2 = System.Drawing.Color.Cyan
+        Me.Guna2GradientPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2GradientPanel1.Name = "Guna2GradientPanel1"
+        Me.Guna2GradientPanel1.Size = New System.Drawing.Size(961, 592)
+        Me.Guna2GradientPanel1.TabIndex = 16
+        '
+        'Guna2GradientPanel2
+        '
+        Me.Guna2GradientPanel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2GradientPanel2.BorderRadius = 50
+        Me.Guna2GradientPanel2.Controls.Add(Me.TextBox1)
+        Me.Guna2GradientPanel2.Controls.Add(Me.Guna2GradientButton1)
+        Me.Guna2GradientPanel2.Controls.Add(Me.Label1)
+        Me.Guna2GradientPanel2.Controls.Add(Me.TextBox2)
+        Me.Guna2GradientPanel2.FillColor = System.Drawing.Color.Cyan
+        Me.Guna2GradientPanel2.FillColor2 = System.Drawing.Color.Blue
+        Me.Guna2GradientPanel2.Location = New System.Drawing.Point(562, 130)
+        Me.Guna2GradientPanel2.Name = "Guna2GradientPanel2"
+        Me.Guna2GradientPanel2.Size = New System.Drawing.Size(303, 315)
+        Me.Guna2GradientPanel2.TabIndex = 16
         '
         'Form1
         '
@@ -162,19 +200,15 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(961, 592)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Guna2Button2)
-        Me.Controls.Add(Me.Guna2Button1)
-        Me.Controls.Add(Me.Guna2GradientButton1)
-        Me.Controls.Add(Me.Guna2PictureBox1)
+        Me.Controls.Add(Me.Guna2GradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.Text = "pan"
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2GradientPanel1.ResumeLayout(False)
+        Me.Guna2GradientPanel2.ResumeLayout(False)
+        Me.Guna2GradientPanel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
@@ -186,4 +220,7 @@ Partial Class Form1
 
     Friend WithEvents TextBox1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TextBox2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
+    Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
+    Friend WithEvents Guna2GradientPanel2 As Guna.UI2.WinForms.Guna2GradientPanel
 End Class

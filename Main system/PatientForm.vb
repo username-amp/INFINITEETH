@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class PatientForm
-    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
+    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=new_password;database=infiniteeth")
     Public cmd As MySqlCommand
     Public da As New MySqlDataAdapter(cmd)
     Public dt As New DataTable
@@ -109,20 +109,11 @@ Public Class PatientForm
         End If
     End Sub
 
-    Private Sub btnAdd_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub btnDelete_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Try
             If con.State = ConnectionState.Closed Then
                 con.Open()
             End If
-
             Dim query As String
             query = "INSERT INTO patient(`Full Name`, Sex, Age, Address, Contact) VALUES (@FullName, @Sex, @Age, @Address, @Contact)"
             cmd = New MySqlCommand(query, con)
@@ -150,7 +141,6 @@ Public Class PatientForm
                 If con.State = ConnectionState.Closed Then
                     con.Open()
                 End If
-
                 Dim selectedRow As DataGridViewRow = DataGridView1.SelectedRows(0)
                 Dim id As Integer = Convert.ToInt32(selectedRow.Cells("PatientID").Value)
 

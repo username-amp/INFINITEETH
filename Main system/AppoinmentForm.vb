@@ -2,7 +2,7 @@
 Imports MySql.Data.MySqlClient
 
 Public Class AppoinmentForm
-    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
+    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=new_password;database=infiniteeth")
 
     Private Sub LoadAppointments()
         Try
@@ -139,6 +139,11 @@ Public Class AppoinmentForm
         Dim approvedCount As Integer = CountAppointmentsByStatus("Approved")
         Dim rejectedCount As Integer = CountAppointmentsByStatus("Rejected")
 
+        ' Update labels with counts
+        lblPending.Text = "Pending: " & pendingCount.ToString()
+        lblapprove.Text = "Approved: " & approvedCount.ToString()
+        lblreject.Text = "Rejected: " & rejectedCount.ToString()
+
         SetProgressBarValue(pbPending, pendingCount, totalAppointments)
         SetProgressBarValue(pbApprove, approvedCount, totalAppointments)
         SetProgressBarValue(pbReject, rejectedCount, totalAppointments)
@@ -259,10 +264,5 @@ Public Class AppoinmentForm
         LoadAppointmentsData()
         CountAndDisplayAppointments()
     End Sub
-
-    Private Sub Guna2Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel4.Paint
-
-    End Sub
-
 
 End Class
