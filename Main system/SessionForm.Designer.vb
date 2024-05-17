@@ -59,7 +59,7 @@ Partial Class SessionForm
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(553, 917)
+        Me.Panel1.Location = New System.Drawing.Point(556, 914)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(277, 100)
         Me.Panel1.TabIndex = 16

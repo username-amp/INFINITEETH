@@ -120,4 +120,21 @@
   <metadata name="BackgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Guna2Button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DQAACw0B7QfALAAAALVJREFUSEvtldEKgCAMRX2qj4r6gP7/g/KCexGd21yMyAMXwro7GkFp8Vu2nKME
+        11pMfTx45twlV86eI8Xcxy6pRMEgyc5rKQUzh7TEyEjekyIiMTeg99osnSaaQW5SQjLQXUpwg7HO3UN3
+        Ck7eytRJa6RyVykxkr8iBSHikFcd8nFxUqxz99A1wUnpVJJnVGgGusktg1zkYb/FlngkJXpy0/9Y+5FM
+        9VHGLhHJSWtm+4vPk9IDnANFYa/0efEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="Guna2Button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DQAACw0B7QfALAAAADRJREFUaEPtykENADAMA7HiG39AA5ASiGpL97sBAAAA4KpXWtimhsI2NRS2qSEA
+        AAAArpn5F9Y1MU8H8aYAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

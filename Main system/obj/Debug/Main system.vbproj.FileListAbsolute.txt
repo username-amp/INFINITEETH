@@ -33,7 +33,6 @@ C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.loadingForm.resources
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.Resources.resources
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.PatientForm.resources
-C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.RecordForm.resources
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main system.vbproj.GenerateResource.cache
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main system.vbproj.CoreCompileInputs.cache
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main sys.76BA47C8.Up2Date
@@ -64,5 +63,5 @@ C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\Syst
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Text.Json.xml
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\bin\Debug\System.ValueTuple.xml
-C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.Calendar.resources
 C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.SessionAppointment.resources
+C:\Users\Lenovo\OneDrive\Pictures\Desktop\INFINITEETH\Main system\obj\Debug\Main_system.Dashboard.resources

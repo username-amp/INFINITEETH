@@ -22,10 +22,5 @@ Main system
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:Main_system.My.Resources.Resources._9e672e19_aa6b_4e14_9caf_9c39a54d4b98">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 </members>
 </doc>

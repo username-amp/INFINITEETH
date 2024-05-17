@@ -1,16 +1,27 @@
 ﻿Imports System.Web.UI.WebControls
 Imports MySql.Data.MySqlClient
+Imports System.Net.Http
 
 Public Class AppoinmentForm
     Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=new_password;database=infiniteeth")
 
-    Private Sub LoadAppointments()
+    Private Sub LoadAppointments(Optional searchQuery As String = "")
         Try
-            Dim pendingQuery As String = "SELECT * FROM pendingappointments"
-            Dim historyQuery As String = "SELECT * FROM appointment_history"
+            Dim pendingQuery As String = "SELECT *, TIME_FORMAT(Time, '%h:%i %p') AS Time12 FROM pendingappointments"
+            Dim historyQuery As String = "SELECT *, TIME_FORMAT(Time, '%h:%i %p') AS Time12 FROM appointment_history"
+
+            If Not String.IsNullOrEmpty(searchQuery) Then
+                pendingQuery &= " WHERE Client_Name LIKE @search OR Services LIKE @search OR Dentist LIKE @search OR Day LIKE @search OR Time LIKE @search OR Status LIKE @search"
+                historyQuery &= " WHERE Client_Name LIKE @search OR Services LIKE @search OR Dentist LIKE @search OR Day LIKE @search OR Time LIKE @search OR Status LIKE @search"
+            End If
 
             Using connection As New MySqlConnection(con.ConnectionString)
                 Using pendingCommand As New MySqlCommand(pendingQuery, connection), historyCommand As New MySqlCommand(historyQuery, connection)
+                    If Not String.IsNullOrEmpty(searchQuery) Then
+                        pendingCommand.Parameters.AddWithValue("@search", "%" & searchQuery & "%")
+                        historyCommand.Parameters.AddWithValue("@search", "%" & searchQuery & "%")
+                    End If
+
                     Dim pendingAdapter As New MySqlDataAdapter(pendingCommand)
                     Dim historyAdapter As New MySqlDataAdapter(historyCommand)
 
@@ -20,7 +31,22 @@ Public Class AppoinmentForm
                     pendingAdapter.Fill(pendingTable)
                     historyAdapter.Fill(historyTable)
 
+                    pendingTable.Columns("Time").ColumnName = "Time24"
+                    pendingTable.Columns("Time12").ColumnName = "Time"
+                    historyTable.Columns("Time").ColumnName = "Time24"
+                    historyTable.Columns("Time12").ColumnName = "Time"
+
+                    If DataGridView1.Columns.Contains("Time24") Then
+                        DataGridView1.Columns("Time24").Visible = False
+                    End If
+
+                    If DataGridView2.Columns.Contains("Time24") Then
+                        DataGridView2.Columns("Time24").Visible = False
+                    End If
+
                     DataGridView1.DataSource = pendingTable
+                    DataGridView2.DataSource = historyTable
+
                     If DataGridView1.Columns.Contains("Delete") Then
                         DataGridView1.Columns.Remove("Delete")
                     End If
@@ -30,11 +56,28 @@ Public Class AppoinmentForm
                     deleteButtonColumn.UseColumnTextForButtonValue = True
                     deleteButtonColumn.Name = "Delete"
                     DataGridView1.Columns.Add(deleteButtonColumn)
+
+                    With DataGridView1
+                        .DefaultCellStyle.Font = New Font("Arial", 12)
+                        .DefaultCellStyle.ForeColor = Color.Black
+                        .DefaultCellStyle.WrapMode = DataGridViewTriState.True
+                    End With
+
+                    With DataGridView2
+                        .DefaultCellStyle.Font = New Font("Arial", 12)
+                        .DefaultCellStyle.ForeColor = Color.Black
+                        .DefaultCellStyle.WrapMode = DataGridViewTriState.True
+                    End With
                 End Using
             End Using
         Catch ex As Exception
             MessageBox.Show("Error loading appointments: " & ex.Message)
         End Try
+    End Sub
+
+
+    Private Sub LoadAppointmentsData(Optional searchQuery As String = "")
+        LoadAppointments(searchQuery)
     End Sub
 
     Private Sub ApproveAppointment()
@@ -69,7 +112,6 @@ Public Class AppoinmentForm
             InsertIntoHistory(clientName, service, dentist, day, time, "Rejected")
             RemoveFromDataGridView(DataGridView1, DataGridView2, DataGridView1.SelectedRows(0))
             LoadAppointments()
-
         Else
             MessageBox.Show("Please select an appointment to reject.")
         End If
@@ -138,21 +180,22 @@ Public Class AppoinmentForm
         Dim pendingCount As Integer = CountAppointmentsByStatus("Pending")
         Dim approvedCount As Integer = CountAppointmentsByStatus("Approved")
         Dim rejectedCount As Integer = CountAppointmentsByStatus("Rejected")
+        Dim cancelledCount As Integer = CountAppointmentsByStatus("Cancelled")
 
-        ' Update labels with counts
         lblPending.Text = "Pending: " & pendingCount.ToString()
         lblapprove.Text = "Approved: " & approvedCount.ToString()
         lblreject.Text = "Rejected: " & rejectedCount.ToString()
+        lblCancelled.Text = "Cancelled: " & cancelledCount.ToString()
 
         SetProgressBarValue(pbPending, pendingCount, totalAppointments)
         SetProgressBarValue(pbApprove, approvedCount, totalAppointments)
         SetProgressBarValue(pbReject, rejectedCount, totalAppointments)
+        SetProgressBarValue(pbCancelled, cancelledCount, totalAppointments)
     End Sub
 
     Private Sub SetProgressBarValue(progressBar As Guna.UI2.WinForms.Guna2ProgressBar, appointmentsCount As Integer, totalAppointments As Integer)
         Dim percentage As Integer = If(totalAppointments > 0, (appointmentsCount / totalAppointments) * 100, 0)
         progressBar.Value = percentage
-
     End Sub
 
     Private Function CountTotalAppointments() As Integer
@@ -183,71 +226,64 @@ Public Class AppoinmentForm
     Private Sub AppoinmentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadAppointmentsData()
         CountAndDisplayAppointments()
-
-    End Sub
-
-    Private Sub LoadAppointmentsData()
-        Try
-            Dim pendingQuery As String = "SELECT * FROM pendingappointments"
-            Dim historyQuery As String = "SELECT * FROM appointment_history"
-
-            Using connection As New MySqlConnection(con.ConnectionString)
-                Using pendingCommand As New MySqlCommand(pendingQuery, connection), historyCommand As New MySqlCommand(historyQuery, connection)
-                    Dim pendingAdapter As New MySqlDataAdapter(pendingCommand)
-                    Dim historyAdapter As New MySqlDataAdapter(historyCommand)
-
-                    Dim pendingTable As New DataTable()
-                    Dim historyTable As New DataTable()
-
-                    pendingAdapter.Fill(pendingTable)
-                    historyAdapter.Fill(historyTable)
-
-                    DataGridView1.DataSource = pendingTable
-                    DataGridView2.DataSource = historyTable
-
-                    With DataGridView1
-                        .DefaultCellStyle.Font = New Font("Arial", 12)
-                        .DefaultCellStyle.ForeColor = Color.Black
-                    End With
-
-                    With DataGridView2
-                        .DefaultCellStyle.Font = New Font("Arial", 12)
-                        .DefaultCellStyle.ForeColor = Color.Black
-                    End With
-                End Using
-            End Using
-        Catch ex As Exception
-            MessageBox.Show("Error loading appointments: " & ex.Message)
-        End Try
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        If e.RowIndex >= 0 AndAlso e.ColumnIndex = DataGridView1.Columns("Delete").Index Then
-            Dim confirmation As DialogResult = MessageBox.Show("Are you sure you want to delete this appointment?", "Confirmation", MessageBoxButtons.YesNo)
-            If confirmation = DialogResult.Yes Then
-                Dim appointmentId As Integer = Convert.ToInt32(DataGridView1.Rows(e.RowIndex).Cells("PendingID").Value)
-                DeleteAppointment(appointmentId)
-                LoadAppointments()
+        If DataGridView1.Columns.Contains("Delete") AndAlso DataGridView1.Columns.Contains("PendingID") Then
+            If e.RowIndex >= 0 AndAlso e.ColumnIndex = DataGridView1.Columns("Delete").Index Then
+                Dim confirmation As DialogResult = MessageBox.Show("Are you sure you want to delete this appointment?", "Confirmation", MessageBoxButtons.YesNo)
+                If confirmation = DialogResult.Yes Then
+                    Dim appointmentId As Integer = Convert.ToInt32(DataGridView1.Rows(e.RowIndex).Cells("PendingID").Value)
+                    DeleteAppointment(appointmentId)
+                End If
             End If
         End If
     End Sub
 
-
     Private Sub DeleteAppointment(appointmentId As Integer)
-        Dim query As String = "DELETE FROM pendingappointments WHERE PendingID = @PendingID"
-        Try
-            Using connection As New MySqlConnection(con.ConnectionString)
-                Using command As New MySqlCommand(query, connection)
-                    command.Parameters.AddWithValue("@PendingID", appointmentId)
-                    connection.Open()
-                    command.ExecuteNonQuery()
+        Dim querySelect As String = "SELECT * FROM pendingappointments WHERE PendingID = @PendingID"
+        Dim appointmentDetails As DataTable = New DataTable()
+
+        Using connection As New MySqlConnection(con.ConnectionString)
+            Using command As New MySqlCommand(querySelect, connection)
+                command.Parameters.AddWithValue("@PendingID", appointmentId)
+                connection.Open()
+
+                Using reader As MySqlDataReader = command.ExecuteReader()
+                    appointmentDetails.Load(reader)
                 End Using
             End Using
-        Catch ex As Exception
-            MessageBox.Show("Error deleting appointment: " & ex.Message)
-        End Try
-    End Sub
+        End Using
 
+        If appointmentDetails.Rows.Count = 1 Then
+            Dim row As DataRow = appointmentDetails.Rows(0)
+            Dim clientName As String = row("Client_Name").ToString()
+            Dim service As String = row("Services").ToString()
+            Dim dentist As String = row("Dentist").ToString()
+            Dim day As String = row("Day").ToString()
+            Dim time As String = row("Time").ToString()
+
+            InsertIntoHistory(clientName, service, dentist, day, time, "Deleted")
+
+            Dim queryDelete As String = "DELETE FROM pendingappointments WHERE PendingID = @PendingID"
+
+            Try
+                Using connection As New MySqlConnection(con.ConnectionString)
+                    Using command As New MySqlCommand(queryDelete, connection)
+                        command.Parameters.AddWithValue("@PendingID", appointmentId)
+                        connection.Open()
+                        command.ExecuteNonQuery()
+                    End Using
+                End Using
+
+                LoadAppointmentsData()
+            Catch ex As Exception
+                MessageBox.Show("Error deleting appointment: " & ex.Message)
+            End Try
+        Else
+            MessageBox.Show("Error: Appointment not found.")
+        End If
+    End Sub
 
 
     Private Sub btnApprove_Click_1(sender As Object, e As EventArgs) Handles btnApprove.Click
@@ -260,9 +296,7 @@ Public Class AppoinmentForm
         CountAndDisplayAppointments()
     End Sub
 
-    Private Sub btnLoad_Click_1(sender As Object, e As EventArgs) Handles btnLoad.Click
-        LoadAppointmentsData()
-        CountAndDisplayAppointments()
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        LoadAppointmentsData(txtSearch.Text)
     End Sub
-
 End Class

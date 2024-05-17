@@ -12,10 +12,19 @@ Public Class DoctorForm
         DisplayDentists()
     End Sub
 
-    Private Sub DisplayDentists()
+    Private Sub DisplayDentists(Optional searchQuery As String = "")
         Try
             Dim query As String = "SELECT fullname, email, workingdayhours, serviceoffered, specialization FROM dentist"
-            da = New MySqlDataAdapter(query, con)
+            If Not String.IsNullOrEmpty(searchQuery) Then
+                query &= " WHERE fullname LIKE @search OR email LIKE @search OR workingdayhours LIKE @search OR serviceoffered LIKE @search OR specialization LIKE @search"
+            End If
+
+            cmd = New MySqlCommand(query, con)
+            If Not String.IsNullOrEmpty(searchQuery) Then
+                cmd.Parameters.AddWithValue("@search", "%" & searchQuery & "%")
+            End If
+
+            da = New MySqlDataAdapter(cmd)
             dt = New DataTable
             da.Fill(dt)
             DataGridView1.DataSource = dt
@@ -26,6 +35,12 @@ Public Class DoctorForm
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        DisplayDentists(txtSearch.Text)
+    End Sub
+
+
 
     Private Sub RefreshData()
         DataGridView1.DataSource = Nothing
