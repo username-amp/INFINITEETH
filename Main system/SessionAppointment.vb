@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 Imports System.Windows.Forms
 Public Class SessionAppointment
-    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=new_password;database=infiniteeth")
+    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
     Public cmd As MySqlCommand
     Public da As MySqlDataAdapter
     Public dt As New DataTable
@@ -45,7 +45,7 @@ Public Class SessionAppointment
             Dim startTime As Date = Guna2DateTimePicker1.Value
             Dim endTime As Date = Guna2DateTimePicker2.Value
 
-            Dim connectionString As String = "server=localhost;username=root;password=new_password;database=infiniteeth"
+            Dim connectionString As String = "server=localhost;username=root;password=;database=infiniteeth"
             Dim selectQuery As String = "SELECT COUNT(*) FROM session WHERE date = @date AND ((StartTime < @endTime AND EndTime > @startTime) OR (StartTime >= @startTime AND StartTime < @endTime) OR (EndTime > @startTime AND EndTime <= @endTime))"
 
             Using con As New MySqlConnection(connectionString)
@@ -113,7 +113,7 @@ Public Class SessionAppointment
 
 
     Private Function getDentist() As List(Of String)
-        Dim connectionString As String = "server=localhost;user=root;password=new_password;database=infiniteeth"
+        Dim connectionString As String = "server=localhost;user=root;password=;database=infiniteeth"
         Dim dentistNames As New List(Of String)
 
         Using con As New MySqlConnection(connectionString)
@@ -131,7 +131,7 @@ Public Class SessionAppointment
     End Function
 
     Private Function getClient() As List(Of String)
-        Dim connectionString As String = "server=localhost;user=root;password=new_password;database=infiniteeth"
+        Dim connectionString As String = "server=localhost;user=root;password=;database=infiniteeth"
         Dim clientNames As New List(Of String)
 
         Using con As New MySqlConnection(connectionString)
@@ -149,7 +149,7 @@ Public Class SessionAppointment
     End Function
 
     Private Function getServices() As List(Of String)
-        Dim connectionString As String = "server=localhost;user=root;password=new_password;database=infiniteeth"
+        Dim connectionString As String = "server=localhost;user=root;password=;database=infiniteeth"
         Dim serviceOffered As New List(Of String)
 
         Using con As New MySqlConnection(connectionString)

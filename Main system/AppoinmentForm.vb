@@ -3,7 +3,7 @@ Imports MySql.Data.MySqlClient
 Imports System.Net.Http
 
 Public Class AppoinmentForm
-    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=new_password;database=infiniteeth")
+    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
 
     Private Sub LoadAppointments(Optional searchQuery As String = "")
         Try

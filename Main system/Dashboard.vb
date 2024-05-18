@@ -5,7 +5,7 @@ Imports MySql.Data.MySqlClient
 Imports Newtonsoft.Json.Linq
 
 Public Class Dashboard
-    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=new_password;database=infiniteeth")
+    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
     Dim cmd As MySqlCommand
     Private Const MAX_PATIENTS As Integer = 100
     Private Const MAX_DENTISTS As Integer = 50
@@ -111,7 +111,7 @@ Public Class Dashboard
         Dim query As String = "SELECT Client_Name, Day FROM pendingappointments WHERE Day >= @StartDate AND Day <= @EndDate"
 
         Try
-            Using con As New MySqlConnection("server=localhost;username=root;password=new_password;database=infiniteeth")
+            Using con As New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
                 con.Open()
 
                 Using command As New MySqlCommand(query, con)
@@ -135,7 +135,7 @@ Public Class Dashboard
         Dim query As String = "SELECT MONTH(Day) AS Month, COUNT(*) AS AppointmentsCount FROM pendingappointments GROUP BY MONTH(Day)"
 
         Try
-            Using con As New MySqlConnection("server=localhost;username=root;password=new_password;database=infiniteeth")
+            Using con As New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
                 con.Open()
 
                 Using command As New MySqlCommand(query, con)
@@ -156,7 +156,7 @@ Public Class Dashboard
                     Chart1.Series.Add("Appointments")
                     Chart1.Series("Appointments").Points.DataBind(chartData, "Key", "Value", "")
 
-                    Chart1.Series("Appointments").ChartType = SeriesChartType.SplineRange
+                    Chart1.Series("Appointments").ChartType = SeriesChartType.Column
 
                     Chart1.ChartAreas(0).AxisX.MajorGrid.Enabled = False
                     Chart1.ChartAreas(0).AxisY.MajorGrid.Enabled = False

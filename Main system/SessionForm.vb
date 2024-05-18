@@ -4,7 +4,7 @@ Imports System.Globalization
 Imports System.Windows.Forms
 
 Public Class SessionForm
-    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=new_password;database=infiniteeth")
+    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
     Public cmd As MySqlCommand
     Public da As MySqlDataAdapter
     Public dt As New DataTable
@@ -60,7 +60,7 @@ Public Class SessionForm
 
 
     Private Function CheckExistingAppointments(dateToCheck As Date) As Boolean
-        Dim connectionString As String = "server=localhost;username=root;password=new_password;database=infiniteeth"
+        Dim connectionString As String = "server=localhost;username=root;password=;database=infiniteeth"
         Dim existingAppointments As Boolean = False
 
         Try
