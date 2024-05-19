@@ -23,6 +23,7 @@ Partial Class SessionAppointment
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SessionAppointment))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.cbDentist = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2DateTimePicker1 = New Guna.UI2.WinForms.Guna2DateTimePicker()
@@ -36,8 +37,8 @@ Partial Class SessionAppointment
         Me.cbServices = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Guna2GradientPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,7 +58,7 @@ Partial Class SessionAppointment
         Me.cbDentist.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cbDentist.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbDentist.ItemHeight = 30
-        Me.cbDentist.Location = New System.Drawing.Point(41, 89)
+        Me.cbDentist.Location = New System.Drawing.Point(80, 90)
         Me.cbDentist.Name = "cbDentist"
         Me.cbDentist.Size = New System.Drawing.Size(200, 36)
         Me.cbDentist.TabIndex = 34
@@ -72,7 +73,7 @@ Partial Class SessionAppointment
         Me.Guna2DateTimePicker1.FillColor = System.Drawing.Color.White
         Me.Guna2DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(41, 253)
+        Me.Guna2DateTimePicker1.Location = New System.Drawing.Point(80, 228)
         Me.Guna2DateTimePicker1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.Guna2DateTimePicker1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.Guna2DateTimePicker1.Name = "Guna2DateTimePicker1"
@@ -85,8 +86,8 @@ Partial Class SessionAppointment
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(285, 232)
+        Me.Label7.ForeColor = System.Drawing.Color.DimGray
+        Me.Label7.Location = New System.Drawing.Point(77, 276)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(34, 18)
         Me.Label7.TabIndex = 39
@@ -97,8 +98,8 @@ Partial Class SessionAppointment
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(44, 68)
+        Me.Label9.ForeColor = System.Drawing.Color.DimGray
+        Me.Label9.Location = New System.Drawing.Point(77, 69)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(54, 18)
         Me.Label9.TabIndex = 28
@@ -107,16 +108,16 @@ Partial Class SessionAppointment
         'btnSubmit
         '
         Me.btnSubmit.Animated = True
-        Me.btnSubmit.AutoRoundedCorners = True
         Me.btnSubmit.BackColor = System.Drawing.Color.Transparent
-        Me.btnSubmit.BorderRadius = 16
+        Me.btnSubmit.BorderRadius = 10
         Me.btnSubmit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSubmit.FillColor = System.Drawing.Color.DimGray
         Me.btnSubmit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnSubmit.ForeColor = System.Drawing.Color.White
-        Me.btnSubmit.Location = New System.Drawing.Point(391, 312)
+        Me.btnSubmit.Location = New System.Drawing.Point(215, 427)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(97, 34)
         Me.btnSubmit.TabIndex = 32
@@ -134,7 +135,7 @@ Partial Class SessionAppointment
         Me.Guna2DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2DateTimePicker2.ForeColor = System.Drawing.Color.White
         Me.Guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.Guna2DateTimePicker2.Location = New System.Drawing.Point(288, 253)
+        Me.Guna2DateTimePicker2.Location = New System.Drawing.Point(80, 297)
         Me.Guna2DateTimePicker2.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.Guna2DateTimePicker2.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.Guna2DateTimePicker2.Name = "Guna2DateTimePicker2"
@@ -154,7 +155,7 @@ Partial Class SessionAppointment
         Me.cbClient.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cbClient.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbClient.ItemHeight = 30
-        Me.cbClient.Location = New System.Drawing.Point(288, 89)
+        Me.cbClient.Location = New System.Drawing.Point(80, 157)
         Me.cbClient.Name = "cbClient"
         Me.cbClient.Size = New System.Drawing.Size(200, 36)
         Me.cbClient.TabIndex = 35
@@ -164,8 +165,8 @@ Partial Class SessionAppointment
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(285, 68)
+        Me.Label10.ForeColor = System.Drawing.Color.DimGray
+        Me.Label10.Location = New System.Drawing.Point(77, 136)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(45, 18)
         Me.Label10.TabIndex = 29
@@ -176,8 +177,8 @@ Partial Class SessionAppointment
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(38, 232)
+        Me.Label11.ForeColor = System.Drawing.Color.DimGray
+        Me.Label11.Location = New System.Drawing.Point(77, 207)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(39, 18)
         Me.Label11.TabIndex = 37
@@ -195,7 +196,7 @@ Partial Class SessionAppointment
         Me.cbServices.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cbServices.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbServices.ItemHeight = 30
-        Me.cbServices.Location = New System.Drawing.Point(41, 171)
+        Me.cbServices.Location = New System.Drawing.Point(77, 366)
         Me.cbServices.Name = "cbServices"
         Me.cbServices.Size = New System.Drawing.Size(200, 36)
         Me.cbServices.TabIndex = 36
@@ -205,8 +206,8 @@ Partial Class SessionAppointment
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(41, 150)
+        Me.Label12.ForeColor = System.Drawing.Color.DimGray
+        Me.Label12.Location = New System.Drawing.Point(77, 345)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(57, 18)
         Me.Label12.TabIndex = 30
@@ -228,25 +229,12 @@ Partial Class SessionAppointment
         Me.Guna2GradientPanel1.Controls.Add(Me.cbClient)
         Me.Guna2GradientPanel1.Controls.Add(Me.btnSubmit)
         Me.Guna2GradientPanel1.Controls.Add(Me.Guna2DateTimePicker2)
-        Me.Guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Guna2GradientPanel1.FillColor2 = System.Drawing.Color.Navy
+        Me.Guna2GradientPanel1.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2GradientPanel1.FillColor2 = System.Drawing.SystemColors.Control
         Me.Guna2GradientPanel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Me.Guna2GradientPanel1.Size = New System.Drawing.Size(600, 500)
+        Me.Guna2GradientPanel1.Size = New System.Drawing.Size(433, 500)
         Me.Guna2GradientPanel1.TabIndex = 41
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Kristen ITC", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(3, 14)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(224, 33)
-        Me.Label4.TabIndex = 41
-        Me.Label4.Text = "Create Schedule"
         '
         'Guna2Button1
         '
@@ -254,19 +242,32 @@ Partial Class SessionAppointment
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.SystemColors.Control
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(71, 370)
+        Me.Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), System.Drawing.Image)
+        Me.Guna2Button1.Location = New System.Drawing.Point(400, 0)
         Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
+        Me.Guna2Button1.Size = New System.Drawing.Size(31, 28)
         Me.Guna2Button1.TabIndex = 42
-        Me.Guna2Button1.Text = "BACK"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Kristen ITC", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.DimGray
+        Me.Label4.Location = New System.Drawing.Point(3, 14)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(203, 33)
+        Me.Label4.TabIndex = 41
+        Me.Label4.Text = "Create Session"
         '
         'SessionAppointment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 500)
+        Me.ClientSize = New System.Drawing.Size(431, 500)
         Me.Controls.Add(Me.Guna2GradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SessionAppointment"

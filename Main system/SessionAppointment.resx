@@ -123,4 +123,15 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>35</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADcSURBVEhL3ZXRDYMgFEXZwkiYC6cyMgCfMgnOY9jgNZeE
+        5tEgFStN2o8bDPDOATEiQgjUM38m2PedvPfknCNrbVNQs21bZHBmJsCEUnFLwODMTHBl5a9Z1/VYUCq4
+        Es6sCowxpLWObcsYZ1YFAAghSClFy7I8+/GMPoxN05TVIJz5dgcJlCQcjvajHSAcOAwDjeMYn9HO81ys
+        4cxThwyJlDKCk+gIjnDmaUFa+e2Crq+o+yF/5TMFoLTK2hhnnjrk1nBmJrjjZwcGZ2aC7r9rXBaY0O3C
+        6ZFfFwR6ADKbDzmZzsoUAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

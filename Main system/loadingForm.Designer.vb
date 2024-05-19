@@ -40,10 +40,10 @@ Partial Class loadingForm
         '
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(400, 80)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(204, 36)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(300, 200)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(296, 204)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Guna2PictureBox1.TabIndex = 3
         Me.Guna2PictureBox1.TabStop = False
         '
@@ -51,7 +51,7 @@ Partial Class loadingForm
         '
         Me.Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), System.Drawing.Image)
         Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(472, 325)
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(265, 308)
         Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
         Me.Guna2PictureBox2.Size = New System.Drawing.Size(174, 98)
         Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -67,7 +67,7 @@ Partial Class loadingForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1118, 592)
+        Me.ClientSize = New System.Drawing.Size(704, 592)
         Me.Controls.Add(Me.Guna2PictureBox2)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

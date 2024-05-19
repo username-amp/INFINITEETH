@@ -132,7 +132,7 @@ Public Class Dashboard
 
 
     Private Sub CountAppointmentsByMonth()
-        Dim query As String = "SELECT MONTH(Day) AS Month, COUNT(*) AS AppointmentsCount FROM pendingappointments GROUP BY MONTH(Day)"
+        Dim query As String = "SELECT MONTH(Day) AS Month, COUNT(*) AS AppointmentsCount FROM appointment_history GROUP BY MONTH(Day)"
 
         Try
             Using con As New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
@@ -146,9 +146,23 @@ Public Class Dashboard
                     Dim chartData As New List(Of KeyValuePair(Of String, Integer))()
 
                     For Each row As DataRow In dataTable.Rows
-                        Dim monthNumber As Integer = Convert.ToInt32(row("Month"))
+                        Dim monthNumber As Integer
+                        If Not row.IsNull("Month") Then
+                            monthNumber = Convert.ToInt32(row("Month"))
+                        Else
+                            ' Handle DBNull or NULL value in the database
+                            Continue For
+                        End If
+
                         Dim monthName As String = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(monthNumber)
-                        Dim count As Integer = Convert.ToInt32(row("AppointmentsCount"))
+                        Dim count As Integer
+                        If Not row.IsNull("AppointmentsCount") Then
+                            count = Convert.ToInt32(row("AppointmentsCount"))
+                        Else
+                            ' Handle DBNull or NULL value in the database
+                            Continue For
+                        End If
+
                         chartData.Add(New KeyValuePair(Of String, Integer)(monthName, count))
                     Next
 
@@ -160,16 +174,11 @@ Public Class Dashboard
 
                     Chart1.ChartAreas(0).AxisX.MajorGrid.Enabled = False
                     Chart1.ChartAreas(0).AxisY.MajorGrid.Enabled = False
-
                 End Using
             End Using
         Catch ex As Exception
             MessageBox.Show("Error counting appointments by month: " & ex.Message)
         End Try
     End Sub
-
-
-
-
 
 End Class
