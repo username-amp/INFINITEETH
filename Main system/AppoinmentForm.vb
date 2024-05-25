@@ -1,6 +1,7 @@
 ﻿Imports System.Web.UI.WebControls
 Imports MySql.Data.MySqlClient
 Imports System.Net.Http
+Imports System.Globalization
 
 Public Class AppoinmentForm
     Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;password=;database=infiniteeth")
@@ -111,6 +112,20 @@ Public Class AppoinmentForm
         If DataGridView1.Rows.Count > 0 Then ' Check if there are rows in the DataGridView
             If DataGridView1.SelectedRows.Count > 0 Then
                 Dim appointmentId As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("PendingID").Value)
+                Dim currentStatus As String = Convert.ToString(DataGridView1.SelectedRows(0).Cells("Status").Value)
+
+                ' Check if the appointment is already approved or rejected
+                If currentStatus = "Approved" Then
+                    MessageBox.Show("This appointment is already approved.", "Already Approved", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return
+                ElseIf currentStatus = "Rejected" Then
+                    MessageBox.Show("This appointment is already rejected.", "Already Rejected", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return
+                ElseIf currentStatus = "Cancelled" Then
+                    MessageBox.Show("This appointment is cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return
+                End If
+
                 Dim clientName As String = Convert.ToString(DataGridView1.SelectedRows(0).Cells("Client_Name").Value)
                 Dim service As String = Convert.ToString(DataGridView1.SelectedRows(0).Cells("Services").Value)
                 Dim dentist As String = Convert.ToString(DataGridView1.SelectedRows(0).Cells("Dentist").Value)
@@ -121,7 +136,8 @@ Public Class AppoinmentForm
                 Dim message As String = GetMessageFromDatabase(appointmentId)
 
                 UpdateAppointmentStatus(appointmentId, "Approved")
-                InsertIntoHistory(appointmentId, clientName, service, dentist, day, time, "Approved", message, patientID)
+                InsertIntoHistory(clientName, service, dentist, day, time, "Approved", message, patientID)
+
 
                 RemoveFromDataGridView(DataGridView1, DataGridView2, DataGridView1.SelectedRows(0))
                 LoadAppointments()
@@ -133,11 +149,24 @@ Public Class AppoinmentForm
         End If
     End Sub
 
-
     Private Sub RejectAppointment()
         If DataGridView1.Rows.Count > 0 Then ' Check if there are rows in the DataGridView
             If DataGridView1.SelectedRows.Count > 0 Then
                 Dim appointmentId As Integer = Convert.ToInt32(DataGridView1.SelectedRows(0).Cells("PendingID").Value)
+                Dim currentStatus As String = Convert.ToString(DataGridView1.SelectedRows(0).Cells("Status").Value)
+
+                ' Check if the appointment is already approved or rejected
+                If currentStatus = "Approved" Then
+                    MessageBox.Show("This appointment is already approved.", "Already Approved", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return
+                ElseIf currentStatus = "Rejected" Then
+                    MessageBox.Show("This appointment is already rejected.", "Already Rejected", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return
+                ElseIf currentStatus = "Cancelled" Then
+                    MessageBox.Show("This appointment is cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return
+                End If
+
                 Dim clientName As String = Convert.ToString(DataGridView1.SelectedRows(0).Cells("Client_Name").Value)
                 Dim service As String = Convert.ToString(DataGridView1.SelectedRows(0).Cells("Services").Value)
                 Dim dentist As String = Convert.ToString(DataGridView1.SelectedRows(0).Cells("Dentist").Value)
@@ -156,7 +185,8 @@ Public Class AppoinmentForm
                 UpdateAppointmentStatusAndMessage(appointmentId, "Rejected", rejectionMessage)
 
                 ' Insert the rejected appointment into the history with the rejection message
-                InsertIntoHistory(appointmentId, clientName, service, dentist, day, time, "Rejected", rejectionMessage, patientID)
+                InsertIntoHistory(clientName, service, dentist, day, time, "Rejected", rejectionMessage, patientID)
+
 
                 ' Update the status and message in the appointment_history table
                 UpdateAppointmentHistoryStatusAndMessage(appointmentId, "Rejected", rejectionMessage)
@@ -229,50 +259,82 @@ Public Class AppoinmentForm
     End Function
 
     Private Sub RemoveFromDataGridView(sourceDataGridView As DataGridView, destinationDataGridView As DataGridView, selectedRow As DataGridViewRow)
-        If sourceDataGridView.DataSource IsNot Nothing AndAlso TypeOf sourceDataGridView.DataSource Is DataTable AndAlso
-       destinationDataGridView.DataSource IsNot Nothing AndAlso TypeOf destinationDataGridView.DataSource Is DataTable Then
+        Try
+            If sourceDataGridView.DataSource IsNot Nothing AndAlso TypeOf sourceDataGridView.DataSource Is DataTable AndAlso
+           destinationDataGridView.DataSource IsNot Nothing AndAlso TypeOf destinationDataGridView.DataSource Is DataTable Then
 
-            Dim sourceDataTable As DataTable = CType(sourceDataGridView.DataSource, DataTable)
-            Dim destinationDataTable As DataTable = CType(destinationDataGridView.DataSource, DataTable)
+                Dim sourceDataTable As DataTable = CType(sourceDataGridView.DataSource, DataTable)
+                Dim destinationDataTable As DataTable = CType(destinationDataGridView.DataSource, DataTable)
 
-            Dim selectedRowData As DataRowView = CType(selectedRow.DataBoundItem, DataRowView)
-            Dim primaryKeyValue As Object = selectedRowData.Row(sourceDataTable.PrimaryKey(0))
+                ' Ensure that primary keys are set
+                If sourceDataTable.PrimaryKey.Length = 0 Then
+                    sourceDataTable.PrimaryKey = New DataColumn() {sourceDataTable.Columns("PendingID")}
+                End If
 
-            ' Check if the row exists in the source DataTable by primary key value
-            Dim rowToRemove As DataRow = sourceDataTable.Rows.Find(primaryKeyValue)
+                If destinationDataTable.PrimaryKey.Length = 0 Then
+                    destinationDataTable.PrimaryKey = New DataColumn() {destinationDataTable.Columns("PendingID")}
+                End If
 
-            If rowToRemove IsNot Nothing Then
-                ' Import row to destination DataTable
-                destinationDataTable.ImportRow(rowToRemove)
-                ' Remove row from source DataTable
-                sourceDataTable.Rows.Remove(rowToRemove)
+                Dim selectedRowData As DataRowView = CType(selectedRow.DataBoundItem, DataRowView)
+                Dim primaryKeyValue As Object = selectedRowData.Row(sourceDataTable.PrimaryKey(0))
+
+                ' Debug: Log the primary key value
+                Console.WriteLine("Primary Key Value: " & primaryKeyValue.ToString())
+
+                ' Check if the row exists in the source DataTable by primary key value
+                Dim rowToRemove As DataRow = sourceDataTable.Rows.Find(primaryKeyValue)
+
+                If rowToRemove IsNot Nothing Then
+                    ' Check if the row already exists in the destination DataTable
+                    Dim rowExists As Boolean = destinationDataTable.Rows.Find(primaryKeyValue) IsNot Nothing
+
+                    ' Debug: Log existing primary key values in the destination DataTable
+                    For Each row As DataRow In destinationDataTable.Rows
+                        Console.WriteLine("Existing Primary Key in Destination: " & row(destinationDataTable.PrimaryKey(0)).ToString())
+                    Next
+
+                    If Not rowExists Then
+                        ' Import row to destination DataTable
+                        destinationDataTable.ImportRow(rowToRemove)
+                        ' Remove row from source DataTable
+                        sourceDataTable.Rows.Remove(rowToRemove)
+                    Else
+                        ' Optionally log this event silently or handle it in another way
+                        ' Console.WriteLine("Row with the same primary key already exists in the destination DataGridView. Primary Key: " & primaryKeyValue.ToString())
+                    End If
+                Else
+                    MessageBox.Show("Selected row not found in the source DataGridView. Primary Key: " & primaryKeyValue.ToString())
+                End If
             Else
-                MessageBox.Show("Selected row not found in the source DataGridView.")
+                MessageBox.Show("Error: Source or destination DataGridView is not properly initialized.")
             End If
-        Else
-            MessageBox.Show("Error: Source or destination DataGridView is not properly initialized.")
-        End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
 
 
 
 
-    Private Sub InsertIntoHistory(pendingID As Integer, clientName As String, service As String, dentist As String, day As String, time As String, status As String, message As String, patientID As Integer)
-        ' Extract date part from the time string
-        Dim datePart As String = day.Split(" "c)(0) ' Assuming day is in the format 'YYYY-MM-DD'
+
+
+
+
+    Private Sub InsertIntoHistory(clientName As String, service As String, dentist As String, day As String, time As String, status As String, message As String, patientID As Integer)
+        ' Extract only the date part from the day string
+        Dim dateOnly As String = DateTime.Parse(day).ToString("MM/dd/yyyy")
 
         ' Build the query
-        Dim query As String = "INSERT INTO appointment_history (PendingID, Client_Name, Services, Dentist, Day, Time, Status, Message, patient_PatientID) VALUES (@PendingID, @Client_Name, @Services, @Dentist, @Day, @Time, @Status, @Message, @PatientID)"
+        Dim query As String = "INSERT INTO appointment_history (Client_Name, Services, Dentist, Day, Time, Status, Message, patient_PatientID) VALUES (@Client_Name, @Services, @Dentist, @Day, @Time, @Status, @Message, @PatientID)"
 
         ' Execute the query
         Using connection As New MySqlConnection(con.ConnectionString)
             Using command As New MySqlCommand(query, connection)
-                command.Parameters.AddWithValue("@PendingID", pendingID)
                 command.Parameters.AddWithValue("@Client_Name", clientName)
                 command.Parameters.AddWithValue("@Services", service)
                 command.Parameters.AddWithValue("@Dentist", dentist)
-                command.Parameters.AddWithValue("@Day", datePart) ' Insert date part only
+                command.Parameters.AddWithValue("@Day", dateOnly) ' Inserting date only
                 command.Parameters.AddWithValue("@Time", time)
                 command.Parameters.AddWithValue("@Status", status)
                 command.Parameters.AddWithValue("@Message", message)
@@ -282,6 +344,15 @@ Public Class AppoinmentForm
             End Using
         End Using
     End Sub
+
+
+
+
+
+
+
+
+
 
 
 
@@ -445,5 +516,18 @@ Public Class AppoinmentForm
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         LoadAppointmentsData(txtSearch.Text)
+    End Sub
+
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+        LoadAppointmentsData()
+        CountAndDisplayAppointments()
+    End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs)
+        Me.Close()
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
+        Me.WindowState = FormWindowState.Minimized
     End Sub
 End Class

@@ -76,4 +76,12 @@ Public Class DoctorForm
             End If
         End Try
     End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) 
+        Me.Close()
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) 
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
 End Class

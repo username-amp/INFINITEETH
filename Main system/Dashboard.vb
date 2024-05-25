@@ -29,15 +29,16 @@ Public Class Dashboard
     End Sub
 
 
-    Private Sub LoadWeatherImages()
+    Public Sub LoadWeatherImages()
         weatherImages.Add("Rain", Image.FromFile("C:\Users\Lenovo\Downloads\icons8-heavy-rain.gif"))
         weatherImages.Add("Clear", Image.FromFile("C:\Users\Lenovo\Downloads\icons8-summer.gif"))
         weatherImages.Add("Clouds", Image.FromFile("C:\Users\Lenovo\Downloads\icons8-clouds.gif"))
         weatherImages.Add("broken clouds", Image.FromFile("C:\Users\Lenovo\Downloads\icons8-error-cloud.gif"))
         weatherImages.Add("light rain", Image.FromFile("C:\Users\Lenovo\Downloads\icons8-light-rain.gif"))
+        weatherImages.Add("scattered clouds", Image.FromFile("C:\Users\Lenovo\Downloads\scatteredclouds.jpg"))
     End Sub
 
-    Private Sub CountAndDisplayPatients()
+    Public Sub CountAndDisplayPatients()
         Try
             If con.State = ConnectionState.Closed Then
                 con.Open()
@@ -56,7 +57,7 @@ Public Class Dashboard
         End Try
     End Sub
 
-    Private Sub CountAndDisplayDentist()
+    Public Sub CountAndDisplayDentist()
         Try
             If con.State = ConnectionState.Closed Then
                 con.Open()
@@ -75,7 +76,7 @@ Public Class Dashboard
         End Try
     End Sub
 
-    Private Sub FetchAndDisplayWeather()
+    Public Sub FetchAndDisplayWeather()
         Try
             Dim url As String = String.Format(API_URL, CITY_NAME, API_KEY)
             Dim client As New WebClient()
@@ -131,7 +132,7 @@ Public Class Dashboard
     End Sub
 
 
-    Private Sub CountAppointmentsByMonth()
+    Public Sub CountAppointmentsByMonth()
         Dim query As String = "SELECT MONTH(Day) AS Month, COUNT(*) AS AppointmentsCount FROM appointment_history GROUP BY MONTH(Day)"
 
         Try
@@ -181,4 +182,11 @@ Public Class Dashboard
         End Try
     End Sub
 
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) 
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) 
+        Me.Close()
+    End Sub
 End Class

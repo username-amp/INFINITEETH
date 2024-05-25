@@ -71,6 +71,7 @@ Partial Class loadingForm
         Me.Controls.Add(Me.Guna2PictureBox2)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "loadingForm"
         Me.Text = "loadingForm"
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

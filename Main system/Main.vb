@@ -54,6 +54,8 @@ Public Class Main
 
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
         switchpanel(DoctorForm)
+        Dashboard.CountAndDisplayPatients()
+        Dashboard.CountAndDisplayDentist()
     End Sub
 
     Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
@@ -72,6 +74,21 @@ Public Class Main
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         switchpanel(Dashboard)
         Dashboard.LoadUpcomingAppointments()
+        Dashboard.CountAppointmentsByMonth()
+        Dashboard.CountAndDisplayPatients()
+        Dashboard.CountAndDisplayDentist()
+        Dashboard.FetchAndDisplayWeather()
+
+
+
+
     End Sub
 
+    Private Sub Guna2Button8_Click(sender As Object, e As EventArgs) Handles Guna2Button8.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub Guna2Button7_Click(sender As Object, e As EventArgs) Handles Guna2Button7.Click
+        Me.Close()
+    End Sub
 End Class

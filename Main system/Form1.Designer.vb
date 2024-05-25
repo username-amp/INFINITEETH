@@ -188,6 +188,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(704, 592)
         Me.Controls.Add(Me.Guna2GradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "pan"
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

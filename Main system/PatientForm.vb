@@ -119,4 +119,12 @@ Public Class PatientForm
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         loadData(txtSearch.Text)
     End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) 
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) 
+        Me.Close()
+    End Sub
 End Class

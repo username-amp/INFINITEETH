@@ -40,6 +40,8 @@ Partial Class Main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Button7 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button8 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -283,11 +285,44 @@ Partial Class Main
         '
         'Guna2Panel2
         '
-        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Guna2Panel2.Location = New System.Drawing.Point(200, 0)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(200, 18)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(937, 634)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(937, 616)
         Me.Guna2Panel2.TabIndex = 3
+        '
+        'Guna2Button7
+        '
+        Me.Guna2Button7.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button7.BackgroundImage = CType(resources.GetObject("Guna2Button7.BackgroundImage"), System.Drawing.Image)
+        Me.Guna2Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button7.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Button7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button7.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button7.Location = New System.Drawing.Point(1121, 0)
+        Me.Guna2Button7.Name = "Guna2Button7"
+        Me.Guna2Button7.Size = New System.Drawing.Size(16, 19)
+        Me.Guna2Button7.TabIndex = 52
+        '
+        'Guna2Button8
+        '
+        Me.Guna2Button8.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button8.BackgroundImage = CType(resources.GetObject("Guna2Button8.BackgroundImage"), System.Drawing.Image)
+        Me.Guna2Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button8.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Button8.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button8.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button8.Location = New System.Drawing.Point(1098, 2)
+        Me.Guna2Button8.Name = "Guna2Button8"
+        Me.Guna2Button8.Size = New System.Drawing.Size(16, 17)
+        Me.Guna2Button8.TabIndex = 53
         '
         'Main
         '
@@ -295,9 +330,12 @@ Partial Class Main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1137, 634)
+        Me.Controls.Add(Me.Guna2Button8)
+        Me.Controls.Add(Me.Guna2Button7)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Main"
         Me.Text = "DashboardForm"
         Me.Guna2Panel1.ResumeLayout(False)
@@ -329,4 +367,6 @@ Partial Class Main
     Friend WithEvents Guna2PictureBox7 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Button7 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button8 As Guna.UI2.WinForms.Guna2Button
 End Class
